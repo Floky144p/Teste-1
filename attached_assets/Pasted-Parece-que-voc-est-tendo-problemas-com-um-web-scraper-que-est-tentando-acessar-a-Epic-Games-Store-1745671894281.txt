@@ -1,0 +1,59 @@
+Parece que você está tendo problemas com um web scraper que está tentando acessar a Epic Games Store, mas está recebendo um erro 403 (Forbidden). Isso geralmente acontece quando o site está bloqueando requisições automatizadas ou quando há falta de headers adequados na requisição.
+
+Aqui estão algumas sugestões para melhorar o código:
+
+1. Adicione headers de navegador real
+O erro 403 sugere que a Epic Games está bloqueando requisições que parecem ser automatizadas. Adicione headers mais realistas:
+
+typescript
+const headers = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'Accept-Language': 'en-US,en;q=0.5',
+  'Accept-Encoding': 'gzip, deflate, br',
+  'Connection': 'keep-alive',
+  'Upgrade-Insecure-Requests': '1',
+  'Sec-Fetch-Dest': 'document',
+  'Sec-Fetch-Mode': 'navigate',
+  'Sec-Fetch-Site': 'none',
+  'Sec-Fetch-User': '?1',
+  'Cache-Control': 'max-age=0'
+};
+2. Considere usar um serviço de proxy ou rotacionar IPs
+A Epic Games pode estar bloqueando requisições frequentes do mesmo IP.
+
+3. Adicione delays entre requisições
+Adicione um delay entre as requisições para parecer mais humano:
+
+typescript
+function delay(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Uso:
+await delay(2000); // 2 segundos
+4. Verifique se há uma API oficial
+Muitas lojas oferecem APIs oficiais que são mais estáveis e permitidas.
+
+5. Trate erros adequadamente
+Melhore o tratamento de erros para não quebrar a aplicação:
+
+typescript
+try {
+  const response = await axios.get(url, { headers });
+  // Processar resposta
+} catch (error) {
+  if (error.response) {
+    console.error(`Error: ${error.response.status}`, error.response.data);
+  } else {
+    console.error('Error:', error.message);
+  }
+  return null; // ou lidar de outra forma
+}
+6. Atualize o browserslist
+O aviso no final sugere que você deve atualizar o browserslist:
+
+bash
+npx update-browserslist-db@latest
+7. Considere usar Puppeteer ou Playwright
+Para sites com proteção contra scraping, ferramentas como Puppeteer ou Playwright que controlam um navegador real podem ser mais eficazes.

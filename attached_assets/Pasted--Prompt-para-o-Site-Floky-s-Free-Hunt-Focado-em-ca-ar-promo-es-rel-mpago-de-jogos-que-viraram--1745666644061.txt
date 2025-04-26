@@ -1,0 +1,78 @@
+🌌 Prompt para o Site "Floky's Free Hunt" (Focado em caçar promoções relâmpago de jogos que viraram grátis!)
+
+🎯 Objetivo Principal
+Criar um site ultrarrápido e 100% em português que caça e exibe apenas jogos que eram PAGOS e agora estão GRÁTIS (por tempo limitado) na Steam e Epic Games, com um design inspirado em Floky (nórdico + high-tech).
+
+⚡ Funcionalidades Chave
+Destaque para "Jogos que Viraram Grátis AGORA":
+
+Card especial com um selo "CAÇADO POR FLOKY" (ícone de corvo com olho brilhante).
+
+Timer em countdown mostrando quanto tempo resta para acabar a promoção.
+
+Botão "Pegar Agora" que redireciona direto para a loja.
+
+Filtros Inteligentes:
+
+"Só AAA" (jogos premium caros que viraram grátis).
+
+"Menos de 1h pra Acabar" (urgência).
+
+"Recomendados pela Matilha" (com base em avaliações de usuários BR).
+
+IA "Floky Scout":
+
+Varre as lojas de hora em hora para identificar promoções relâmpago.
+
+Checa se o jogo já foi gratuito antes (evita repetições).
+
+Gera um relatório diário tipo: *"Hoje Floky caçou 3 jogos de R$200+ grátis!"*.
+
+🎨 Design & Estilo
+Cores: Preto (#0D0D0D) + verde-ácido (#00FFA3) e roxo cyber (#C724F1).
+
+Fonte: Komoda para títulos (com efeito de "fosco congelado") + Geist (clean) para textos.
+
+Ícones Animados:
+
+Corvo que pisca os olhos quando um novo jogo é detectado.
+
+Machado nórdico que "quebra o preço" (animação ao lado do valor riscado).
+
+📊 Estrutura do Site
+Header:
+
+Logo "Floky's Free Hunt" com som de asas ao carregar.
+
+Barra de busca "Floky, tem algo novo?" (com placeholder em runas).
+
+Seção Hero:
+
+Animação de um corvo mergulhando e "agarrando" um logo da Steam/Epic.
+
+Frase: "Jogos de R$300+ GRÁTIS? Floky caça para você."
+
+Cards de Jogos:
+
+Layout estilo "troféus nórdicos" (com bordas em pedra talhada).
+
+Info crucial:
+
+Preço original (ex: ~~R$ 249,90~~).
+
+Tempo restante (ex: ⏳ 2h43min).
+
+Ícone de "hot" se for um jogo muito cobiçado.
+
+Footer:
+
+Assinatura "Floky não dorme. Atualizado a cada 60 minutos."
+
+Botão "Alimente o Corvo" (doação em Pix:https://widget.livepix.gg/embed/0458a0e8-5482-4da6-ae0d-3a87fc463840 )
+
+🛠️ Tecnologias
+Scraping em Tempo Real: Python + BeautifulSoup (ou APIs oficiais se disponíveis).
+
+Banco de Dados: Firebase (para armazenar histórico de promoções).
+
+Notificações: Web Push + Discord Webhook (canal "Floky's Alerts").

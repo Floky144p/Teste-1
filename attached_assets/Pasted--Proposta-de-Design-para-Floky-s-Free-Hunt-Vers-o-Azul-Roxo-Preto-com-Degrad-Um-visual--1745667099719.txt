@@ -1,0 +1,61 @@
+🎨 Proposta de Design para "Floky's Free Hunt" – Versão Azul, Roxo & Preto com Degradê
+
+Um visual futurista e místico, combinando a essência nórdica de Floky com uma paleta fria e imersiva. Segue o esquema detalhado:
+
+🌈 Paleta de Cores
+Tipo	Cor (Hex)	Uso Principal
+Fundo	#0A0A12 (Preto-azulado)	Base do site + cards.
+Degradê	#0A0A12 → #2D0A3A (Preto → Roxo profundo)	Fundo de seções hero e headers.
+Destaques	#00A3FF (Azul elétrico)	Botões, títulos e ícones animados.
+Secundária	#8A2BE2 (Roxo médio)	Bordas, hover effects e subtítulos.
+Texto	#E0E0FF (Branco-azulado)	Para legibilidade em dark mode.
+✨ Como Aplicar o Degradê
+Background Geral:
+
+Gradiente angular (15°): linear-gradient(15deg, #0A0A12 0%, #2D0A3A 100%).
+
+Efeito "Constelação": Pontos brilhantes (#00A3FF a 10% opacity) simulando estrelas.
+
+Cards de Jogos:
+
+Fundo: Preto sólido (#0A0A12) com borda roxa (#8A2BE2).
+
+Hover: Brilho interno azul (#00A3FF a 20%) + animação de "respiração".
+
+Header:
+
+Barra superior: Degradê horizontal (#0A0A12 → #8A2BE2).
+
+Logo "Floky's Free Hunt": Texto em #00A3FF com sombra roxa (#8A2BE2).
+
+🖥️ Exemplo Visual (Seção Hero)
+html
+<div class="hero" style="background: linear-gradient(15deg, #0A0A12 0%, #2D0A3A 100%);">
+  <h1 style="font-family: 'Kingslay', sans-serif; color: #00A3FF; text-shadow: 0 0 10px #8A2BE2;">
+    JOGOS DE R$300+ <span style="color: #E0E0FF;">GRÁTIS?</span>
+  </h1>
+  <p style="color: #E0E0FF;">Floky caçou <span style="color: #00A3FF;">3 AAA</span> hoje!</p>
+</div>
+🎮 Elementos Temáticos
+Ícones:
+
+Corvo de Floky: Asas em #8A2BE2 + olhos brilhando em #00A3FF.
+
+Machado Nórdico: Animação de girar ao carregar novos jogos.
+
+Botões:
+
+Estilo: Fundo preto (#0A0A12) + borda gradiente (#00A3FF → #8A2BE2).
+
+Texto: "PEGAR AGORA" em #E0E0FF com glow azul.
+
+📱 Responsividade
+Mobile: Fundo vira preto sólido (#0A0A12) para evitar sobrecarga visual.
+
+Desktop: Efeito parallax no degradê (camadas de roxo/azul se movendo lentamente).
+
+⚡ Toque Final
+Load Screen: Animação de um corvo voando através de um portal roxo (simbolizando a busca por jogos).
+
+Easter Egg: Botão secreto (🔮) que ativa um modo "Noite Viking" (fundo totalmente roxo com runas azuis).
+

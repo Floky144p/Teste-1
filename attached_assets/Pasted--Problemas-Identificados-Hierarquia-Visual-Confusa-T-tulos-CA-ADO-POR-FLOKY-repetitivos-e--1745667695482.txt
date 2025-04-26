@@ -1,0 +1,92 @@
+🔍 Problemas Identificados
+Hierarquia Visual Confusa
+
+Títulos ("CAÇADO POR FLOKY") repetitivos e sem destaque.
+
+Cards de jogos desalinhados (ex: "EXPIRADO" vs. "PEGAR AGORA").
+
+Cores e Contraste
+
+Falta uniformidade nos botões e selos ("HOT", "NOT").
+
+Fundo branco puro (#FFFFFF) cansativo para os olhos (não combina com o tema nórdico/tech).
+
+Informação Redundante
+
+Texto "CAÇADO POR FLOKY" repetido em cada card (poderia ser um ícone de corvo pequeno).
+
+Seção de IA ("Floky Scout")
+
+Layout muito estático (poderia ter animações ou ilustrações).
+
+🎨 Proposta de Redesign (Foco: Azul/Roxo/Preto com Degradê)
+1. Cabeçalho & Busca
+Fundo: Gradiente preto-roxo (#0A0A12 → #2D0A3A).
+
+Barra de Busca:
+
+html
+<div class="search-bar">
+  <input type="text" placeholder="Floky, tem algo novo? 🕵️" />
+  <button>Caçar!</button>
+</div>
+Estilo: Borda roxa (#8A2BE2) + glow azul (#00A3FF) no hover.
+
+2. Cards de Jogos (Exemplo Reformulado)
+![Capa do Jogo]	Control Ultimate Edition
+~~R$ 129,90~~	🛑 GRÁTIS POR 1h56min
+🏷️ Epic Games	⭐ 9.1/10 (Steam)
+🔮 100% PT-BR	[PEGAR AGORA] (botão azul)
+Melhorias:
+
+Selo "CAÇADO POR FLOKY" → Substituir por ícone de corvo no canto superior direito.
+
+Status "EXPIRADO" → Banner vermelho com ícone de ⏳ (evita confusão).
+
+3. Seção "Floky Scout" (IA)
+Ilustração: Corvo com olho brilhante (animação pulsante em #00A3FF).
+
+Checklists: Substituir por cards interativos (ex: hover mostra detalhes da varredura).
+
+4. Estatísticas
+Design: Números em azul neon (#00A3FF) + títulos em roxo (#8A2BE2).
+
+Última Caçada: Card com borda pulsante para urgência.
+
+🎯 Prioridades de Implementação
+Paleta de Cores (Urgente):
+
+Aplicar gradiente no fundo e ajustar cores dos textos/botões.
+
+Componentes Críticos:
+
+Cards de jogos com novo layout (selos e botões padronizados).
+
+Barra de busca estilizada.
+
+Toques Finais:
+
+Ícones temáticos (corvos, machados nórdicos).
+
+Animação sutil no hover dos cards.
+
+📱 Exemplo Mobile (Otimização)
+Cards: 1 coluna + fonte 10% maior.
+
+Menu: Hambúrguer com ícone de corvo.
+
+⚡ Código Rápido (CSS para Botão)
+css
+.btn-caçar {
+  background: linear-gradient(45deg, #00A3FF, #8A2BE2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+.btn-caçar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00A3FF;
+}
