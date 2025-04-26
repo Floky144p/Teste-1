@@ -1,0 +1,161 @@
+@import './fonts.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 20% 5%;
+  --foreground: 0 0% 100%;
+
+  --card: 240 20% 7%;
+  --card-foreground: 0 0% 100%;
+ 
+  --popover: 240 20% 8%;
+  --popover-foreground: 0 0% 100%;
+ 
+  --primary: 205 100% 50%; /* #00A3FF */
+  --primary-foreground: 240 20% 5%;
+ 
+  --secondary: 270 75% 54%; /* #8A2BE2 */
+  --secondary-foreground: 0 0% 100%;
+ 
+  --muted: 240 20% 15%;
+  --muted-foreground: 240 10% 65%;
+ 
+  --accent: 270 75% 54%; /* #8A2BE2 */
+  --accent-foreground: 0 0% 100%;
+ 
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 240 20% 15%;
+  --input: 240 20% 15%;
+  --ring: 205 100% 50%;
+
+  --radius: 0.5rem;
+
+  /* Custom Floky colors */
+  --floky-black: 240 9% 7%; /* #0D0D14 */
+  --floky-blue: 205 100% 50%; /* #00A3FF */
+  --floky-purple: 270 75% 54%; /* #8A2BE2 */
+  --floky-expirado: 0 84% 60%; /* Vermelho para badge EXPIRADO */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-white antialiased;
+    background-color: #0A0A12;
+    font-family: var(--font-heading);
+    background-image: linear-gradient(to bottom, #0A0A12, #1A1A2E);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .frosted-text {
+    text-shadow: 0 0 7px rgba(0, 163, 255, 0.6);
+    letter-spacing: 1px;
+  }
+  
+  .carved-border {
+    position: relative;
+    border: 2px solid #222233;
+    background-clip: padding-box;
+    box-shadow: 
+      inset 0 0 15px rgba(0, 163, 255, 0.3),
+      0 0 10px rgba(138, 43, 226, 0.3);
+  }
+  
+  .carved-border::before {
+    content: '';
+    position: absolute;
+    top: -1px; right: -1px; bottom: -1px; left: -1px;
+    z-index: -1;
+    background: linear-gradient(45deg, rgba(0, 163, 255, 0.2), rgba(138, 43, 226, 0.2));
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .placeholder-style::placeholder {
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+  }
+
+  .countdown-text {
+    background: linear-gradient(90deg, #00A3FF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  
+  /* Constellation effect */
+  .constellation-bg {
+    position: relative;
+  }
+  
+  .constellation-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#00A3FF 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .animate-crow-swoop {
+    animation: crow-swoop 2s ease-in-out;
+  }
+  
+  .animate-blink {
+    animation: blink 3s infinite;
+  }
+  
+  .animate-axe-cut {
+    animation: axe-cut 1s forwards;
+  }
+  
+  @keyframes crow-swoop {
+    0% { transform: translateY(-50px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  
+  @keyframes axe-cut {
+    0% { transform: rotate(0deg) translateX(0); }
+    50% { transform: rotate(-20deg) translateX(-10px); }
+    100% { transform: rotate(0deg) translateX(0); }
+  }
+}
